@@ -45,7 +45,6 @@ class Mlp_Redirect_User_Settings_Html implements Mlp_User_Settings_View_Interfac
 	 * @return void
 	 */
 	public function show_content( WP_User $user ) {
-
 		$key     = esc_attr( $this->key );
 		$current = (int) get_user_meta( $user->ID, $this->key );
 		$check   = checked( 1, $current, FALSE );

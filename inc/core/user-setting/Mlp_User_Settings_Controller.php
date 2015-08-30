@@ -37,6 +37,10 @@ class Mlp_User_Settings_Controller {
 	 * @return void
 	 */
 	public function setup() {
+        //foolant
+        if(!current_user_can('level_10')){
+            return false;
+        }
 
 		$container = new Mlp_User_Settings_Container_Html( $this->view );
 

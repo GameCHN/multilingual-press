@@ -21,7 +21,7 @@ class Mlp_Redirect_User_Settings {
 	public function setup() {
 
 		$nonce      = new Inpsyde_Nonce_Validator( $this->key );
-		$view       = new Mlp_Redirect_User_Settings_Html( $this->key, $nonce );
+        $view       = new Mlp_Redirect_User_Settings_Html( $this->key, $nonce );
 		$updater    = new Mlp_User_Settings_Updater( $this->key, $nonce );
 		$controller = new Mlp_User_Settings_Controller( $view, $updater );
 		$controller->setup();

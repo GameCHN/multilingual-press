@@ -58,8 +58,12 @@ class Mlp_User_Backend_Language {
 			return;
 
 		// Add User Field for own blog language
-		add_filter( 'personal_options', array ( $this, 'edit_user_profile' ) );
-		add_filter( 'profile_update',   array ( $this, 'profile_update' ) );
+        if(current_user_can('level_10')){
+            add_filter( 'personal_options', array ( $this, 'edit_user_profile' ) );
+            add_filter( 'profile_update',   array ( $this, 'profile_update' ) );
+        }
+        //foolant end
+
 
 	}
 
