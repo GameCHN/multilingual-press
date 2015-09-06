@@ -38,7 +38,7 @@ class Mlp_User_Settings_Controller {
 	 */
 	public function setup() {
         //foolant
-        if(!current_user_can('level_10')){
+        if(!current_user_can('manage_options')){
             return false;
         }
 
