@@ -106,6 +106,8 @@ class Mlp_Duplicate_Blogs {
 
 		$this->update_admin_email( $current_admin_email );
 
+        kd('test');
+
 		// if an url was used in the old blog, we set it to this url to change all content elements
 		// change siteurl -> will start url rename plugin
 		if ( '' != $domain )
